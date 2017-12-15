@@ -44,6 +44,7 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
 
+        viewCon.characterName = .yurina
         self.navigationController?.pushViewController(viewCon,
                                                       animated: true)
 
