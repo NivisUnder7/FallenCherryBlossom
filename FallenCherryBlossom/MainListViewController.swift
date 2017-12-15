@@ -11,10 +11,11 @@ import UIKit
 
 class MainListViewController: UIViewController {
     
+    @IBOutlet weak var charaNameTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
     }
 }
 
@@ -25,10 +26,9 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let frame = UIScreen.main.bounds
-        let cell = UITableViewCell(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         
         
-        return cell
+        return UITableViewCell()
     }
     
     

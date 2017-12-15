@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16F4A3B81FE3595200697A9F /* CharaNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F4A3B71FE3595200697A9F /* CharaNameCell.xib */; };
+		16F4A3BA1FE35B3A00697A9F /* CharaNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4A3B91FE35B3A00697A9F /* CharaNameCell.swift */; };
+		16F4A3BD1FE35F1100697A9F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4A3BC1FE35F1000697A9F /* R.generated.swift */; };
+		18DE4252342DE885AB144061 /* Pods_FallenCherryBlossomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530E9F20662A4C51C408137D /* Pods_FallenCherryBlossomTests.framework */; };
+		614C2CC3F565FED7E7575B55 /* Pods_FallenCherryBlossom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B352DE26E231A20B34FAE0 /* Pods_FallenCherryBlossom.framework */; };
 		6A894F271FE2E55800707521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A894F261FE2E55800707521 /* AppDelegate.swift */; };
 		6A894F291FE2E55800707521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A894F281FE2E55800707521 /* ViewController.swift */; };
 		6A894F2C1FE2E55800707521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A894F2A1FE2E55800707521 /* Main.storyboard */; };
@@ -15,6 +20,7 @@
 		6A894F3C1FE2E55800707521 /* FallenCherryBlossomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A894F3B1FE2E55800707521 /* FallenCherryBlossomTests.swift */; };
 		6A894F471FE2E55800707521 /* FallenCherryBlossomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A894F461FE2E55800707521 /* FallenCherryBlossomUITests.swift */; };
 		6A894F551FE2E5D100707521 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A894F541FE2E5D100707521 /* MainListViewController.swift */; };
+		A5689852620D464CFB2FD56A /* Pods_FallenCherryBlossomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203C8BF796B9E4CBC66DA846 /* Pods_FallenCherryBlossomUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16F4A3B71FE3595200697A9F /* CharaNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharaNameCell.xib; sourceTree = "<group>"; };
+		16F4A3B91FE35B3A00697A9F /* CharaNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharaNameCell.swift; sourceTree = "<group>"; };
+		16F4A3BC1FE35F1000697A9F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		203C8BF796B9E4CBC66DA846 /* Pods_FallenCherryBlossomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallenCherryBlossomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41CCB808B8D786269EAF71EC /* Pods-FallenCherryBlossomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossomTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossomTests/Pods-FallenCherryBlossomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		493D226735BFB75F7325E397 /* Pods-FallenCherryBlossomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossomUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossomUITests/Pods-FallenCherryBlossomUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		530E9F20662A4C51C408137D /* Pods_FallenCherryBlossomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallenCherryBlossomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB1DF479499F651C48B90E6 /* Pods-FallenCherryBlossom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossom.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossom/Pods-FallenCherryBlossom.release.xcconfig"; sourceTree = "<group>"; };
 		6A894F231FE2E55800707521 /* FallenCherryBlossom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallenCherryBlossom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A894F261FE2E55800707521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A894F281FE2E55800707521 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,10 @@
 		6A894F461FE2E55800707521 /* FallenCherryBlossomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallenCherryBlossomUITests.swift; sourceTree = "<group>"; };
 		6A894F481FE2E55800707521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A894F541FE2E5D100707521 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
+		80B352DE26E231A20B34FAE0 /* Pods_FallenCherryBlossom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallenCherryBlossom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849F1C1F3097959AE1A7164D /* Pods-FallenCherryBlossomUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossomUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossomUITests/Pods-FallenCherryBlossomUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F26C3C7737929DF366D6912F /* Pods-FallenCherryBlossomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossomTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossomTests/Pods-FallenCherryBlossomTests.release.xcconfig"; sourceTree = "<group>"; };
+		FCE3AA87AF8E9911AEEA694A /* Pods-FallenCherryBlossom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossom/Pods-FallenCherryBlossom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614C2CC3F565FED7E7575B55 /* Pods_FallenCherryBlossom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DE4252342DE885AB144061 /* Pods_FallenCherryBlossomTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5689852620D464CFB2FD56A /* Pods_FallenCherryBlossomUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16F4A3B61FE358B000697A9F /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				16F4A3B71FE3595200697A9F /* CharaNameCell.xib */,
+				16F4A3B91FE35B3A00697A9F /* CharaNameCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		6A894F1A1FE2E55800707521 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,8 @@
 				6A894F3A1FE2E55800707521 /* FallenCherryBlossomTests */,
 				6A894F451FE2E55800707521 /* FallenCherryBlossomUITests */,
 				6A894F241FE2E55800707521 /* Products */,
+				F2FB83464559E44910CE0FF3 /* Pods */,
+				EC079778AC6C732D47E8A706 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +131,9 @@
 		6A894F251FE2E55800707521 /* FallenCherryBlossom */ = {
 			isa = PBXGroup;
 			children = (
+				16F4A3BC1FE35F1000697A9F /* R.generated.swift */,
 				6A894F261FE2E55800707521 /* AppDelegate.swift */,
+				16F4A3B61FE358B000697A9F /* CustomCell */,
 				6A894F281FE2E55800707521 /* ViewController.swift */,
 				6A894F2A1FE2E55800707521 /* Main.storyboard */,
 				6A894F541FE2E5D100707521 /* MainListViewController.swift */,
@@ -128,6 +162,29 @@
 			path = FallenCherryBlossomUITests;
 			sourceTree = "<group>";
 		};
+		EC079778AC6C732D47E8A706 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80B352DE26E231A20B34FAE0 /* Pods_FallenCherryBlossom.framework */,
+				530E9F20662A4C51C408137D /* Pods_FallenCherryBlossomTests.framework */,
+				203C8BF796B9E4CBC66DA846 /* Pods_FallenCherryBlossomUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2FB83464559E44910CE0FF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCE3AA87AF8E9911AEEA694A /* Pods-FallenCherryBlossom.debug.xcconfig */,
+				5BB1DF479499F651C48B90E6 /* Pods-FallenCherryBlossom.release.xcconfig */,
+				41CCB808B8D786269EAF71EC /* Pods-FallenCherryBlossomTests.debug.xcconfig */,
+				F26C3C7737929DF366D6912F /* Pods-FallenCherryBlossomTests.release.xcconfig */,
+				493D226735BFB75F7325E397 /* Pods-FallenCherryBlossomUITests.debug.xcconfig */,
+				849F1C1F3097959AE1A7164D /* Pods-FallenCherryBlossomUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +192,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A894F4B1FE2E55800707521 /* Build configuration list for PBXNativeTarget "FallenCherryBlossom" */;
 			buildPhases = (
+				A3F4A9C49B845E7386D3D8BB /* [CP] Check Pods Manifest.lock */,
+				16F4A3BB1FE35E5900697A9F /* R.swfit */,
 				6A894F1F1FE2E55800707521 /* Sources */,
 				6A894F201FE2E55800707521 /* Frameworks */,
 				6A894F211FE2E55800707521 /* Resources */,
+				02014EB4F293DCD42A584254 /* [CP] Embed Pods Frameworks */,
+				9B6E817D935A37F2F2F489B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A894F4E1FE2E55800707521 /* Build configuration list for PBXNativeTarget "FallenCherryBlossomTests" */;
 			buildPhases = (
+				981DE75CAC5282CE00535226 /* [CP] Check Pods Manifest.lock */,
 				6A894F331FE2E55800707521 /* Sources */,
 				6A894F341FE2E55800707521 /* Frameworks */,
 				6A894F351FE2E55800707521 /* Resources */,
+				38CE411D52AC51C07D8CCDB3 /* [CP] Embed Pods Frameworks */,
+				B0D70BD644C87616173590E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A894F511FE2E55800707521 /* Build configuration list for PBXNativeTarget "FallenCherryBlossomUITests" */;
 			buildPhases = (
+				2CB86B2BA5880767AD9F0E07 /* [CP] Check Pods Manifest.lock */,
 				6A894F3E1FE2E55800707521 /* Sources */,
 				6A894F3F1FE2E55800707521 /* Frameworks */,
 				6A894F401FE2E55800707521 /* Resources */,
+				ED253E345500A7E758FD48E3 /* [CP] Embed Pods Frameworks */,
+				06556CC87B92DD1C81B89178 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +304,7 @@
 			files = (
 				6A894F311FE2E55800707521 /* LaunchScreen.storyboard in Resources */,
 				6A894F2E1FE2E55800707521 /* Assets.xcassets in Resources */,
+				16F4A3B81FE3595200697A9F /* CharaNameCell.xib in Resources */,
 				6A894F2C1FE2E55800707521 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +325,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02014EB4F293DCD42A584254 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossom/Pods-FallenCherryBlossom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		06556CC87B92DD1C81B89178 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossomUITests/Pods-FallenCherryBlossomUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16F4A3BB1FE35E5900697A9F /* R.swfit */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swfit;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
+		2CB86B2BA5880767AD9F0E07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		38CE411D52AC51C07D8CCDB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossomTests/Pods-FallenCherryBlossomTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		981DE75CAC5282CE00535226 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B6E817D935A37F2F2F489B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossom/Pods-FallenCherryBlossom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F4A9C49B845E7386D3D8BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0D70BD644C87616173590E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossomTests/Pods-FallenCherryBlossomTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED253E345500A7E758FD48E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossomUITests/Pods-FallenCherryBlossomUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6A894F1F1FE2E55800707521 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +484,8 @@
 			files = (
 				6A894F291FE2E55800707521 /* ViewController.swift in Sources */,
 				6A894F551FE2E5D100707521 /* MainListViewController.swift in Sources */,
+				16F4A3BD1FE35F1100697A9F /* R.generated.swift in Sources */,
+				16F4A3BA1FE35B3A00697A9F /* CharaNameCell.swift in Sources */,
 				6A894F271FE2E55800707521 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,10 +650,11 @@
 		};
 		6A894F4C1FE2E55800707521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCE3AA87AF8E9911AEEA694A /* Pods-FallenCherryBlossom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EEXM95Q4RF;
+				DEVELOPMENT_TEAM = APUZHKA85H;
 				INFOPLIST_FILE = FallenCherryBlossom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TenguOhSoftware.FallenCherryBlossom;
@@ -443,10 +666,11 @@
 		};
 		6A894F4D1FE2E55800707521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB1DF479499F651C48B90E6 /* Pods-FallenCherryBlossom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EEXM95Q4RF;
+				DEVELOPMENT_TEAM = APUZHKA85H;
 				INFOPLIST_FILE = FallenCherryBlossom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TenguOhSoftware.FallenCherryBlossom;
@@ -458,6 +682,7 @@
 		};
 		6A894F4F1FE2E55800707521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CCB808B8D786269EAF71EC /* Pods-FallenCherryBlossomTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +700,7 @@
 		};
 		6A894F501FE2E55800707521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F26C3C7737929DF366D6912F /* Pods-FallenCherryBlossomTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +718,7 @@
 		};
 		6A894F521FE2E55800707521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493D226735BFB75F7325E397 /* Pods-FallenCherryBlossomUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +735,7 @@
 		};
 		6A894F531FE2E55800707521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849F1C1F3097959AE1A7164D /* Pods-FallenCherryBlossomUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
