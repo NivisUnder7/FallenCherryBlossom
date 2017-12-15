@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lpz-u7-S8I" customClass="CardCell" customModule="FallenCherryBlossom" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lpz-u7-S8I" id="s3b-Vm-URU">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カード名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg5-P0-I4l">
+                        <rect key="frame" x="32" y="13" width="140" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="07A-dd-LFW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイプ(攻撃等)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwD-z0-Auc">
+                        <rect key="frame" x="196" y="13" width="136" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvv-0h-0vO">
+                        <rect key="frame" x="356" y="13" width="25.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vg5-P0-I4l" firstAttribute="centerY" secondItem="s3b-Vm-URU" secondAttribute="centerY" id="1vT-1d-Qr8"/>
+                    <constraint firstItem="SwD-z0-Auc" firstAttribute="centerY" secondItem="s3b-Vm-URU" secondAttribute="centerY" id="Auy-ic-YIX"/>
+                    <constraint firstItem="xvv-0h-0vO" firstAttribute="centerY" secondItem="s3b-Vm-URU" secondAttribute="centerY" id="CV1-oN-Rq7"/>
+                    <constraint firstItem="SwD-z0-Auc" firstAttribute="leading" secondItem="Vg5-P0-I4l" secondAttribute="trailing" constant="24" id="E8p-08-eFr"/>
+                    <constraint firstItem="Vg5-P0-I4l" firstAttribute="leading" secondItem="s3b-Vm-URU" secondAttribute="leading" constant="32" id="QIa-uK-Js5"/>
+                    <constraint firstItem="xvv-0h-0vO" firstAttribute="leading" secondItem="SwD-z0-Auc" secondAttribute="trailing" constant="24" id="s2T-6v-Kry"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionTypeLabel" destination="SwD-z0-Auc" id="Zaf-IL-31n"/>
+                <outlet property="cardNameLabel" destination="Vg5-P0-I4l" id="YfE-hf-pGr"/>
+                <outlet property="damageLable" destination="xvv-0h-0vO" id="Y0x-uL-HEL"/>
+            </connections>
+            <point key="canvasLocation" x="-139" y="-226"/>
+        </tableViewCell>
+    </objects>
+</document>
