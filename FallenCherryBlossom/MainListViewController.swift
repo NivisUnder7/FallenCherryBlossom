@@ -16,6 +16,9 @@ class MainListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        charaNameTableView.delegate = self
+        charaNameTableView.dataSource = self
+        charaNameTableView.register(R.nib.charaNameCell(), forCellReuseIdentifier: "CharaNameCell")
     }
 }
 
@@ -25,11 +28,12 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let frame = UIScreen.main.bounds
-        
-        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CharaNameCell") as? CharaNameCell {
+            cell.setup(name: "ユリナ")
+            return cell
+        }
+
         return UITableViewCell()
     }
-    
-    
+
 }
