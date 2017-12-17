@@ -7,6 +7,7 @@ target 'FallenCherryBlossom' do
 
   # Pods for FallenCherryBlossom
   pod 'R.swift'
+  pod 'RealmSwift'
 
   target 'FallenCherryBlossomTests' do
     inherit! :search_paths

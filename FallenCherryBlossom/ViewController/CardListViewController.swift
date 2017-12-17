@@ -14,30 +14,44 @@ class CardListViewController: UIViewController {
     @IBOutlet weak var cardListTableView: UITableView!
 
     let dequeueCellName = "CardCell"
+    var characterName: CharaName? = nil
+    var cardList = [CardStruct]()
 
     override func viewDidLoad() {
         cardListTableView.delegate = self
         cardListTableView.dataSource = self
 
         cardListTableView.register(R.nib.cardCell(), forCellReuseIdentifier: dequeueCellName)
+//        setupCardList()
+        cardListTableView.reloadData()
     }
+
+//    func setupCardList() {
+//        guard let charaName = characterName else {
+//            return
+//        }
+//
+//        switch charaName {
+//        case .yurina:
+//            cardList = cardList
+//        case .tokoyo:
+//            break
+//        default:
+//            break
+//        }
+//    }
 }
 
 extension CardListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //超絶暫定コード。配列から取る
-        return 1
+        return cardList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //超絶暫定コード。配列から取る
         if let cell = tableView.dequeueReusableCell(withIdentifier: dequeueCellName) as? CardCell {
-            let cellInfo = CardStruct(cardName: "斬",
-                                      actionType: .attack,
-                                      damage: "3/1",
-                                      distance: "1〜3")
-            cell.setup(cardInfo: cellInfo)
+            cell.setup(cardInfo: cardList[indexPath.row])
 
             return cell
         }
@@ -51,6 +65,7 @@ extension CardListViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
 
+        viewCon.cardName = cardList[indexPath.row].name
         self.navigationController?.pushViewController(viewCon,
                                                       animated: true)
     }

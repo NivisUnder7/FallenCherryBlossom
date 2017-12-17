@@ -12,7 +12,25 @@ import UIKit
 class MainListViewController: UIViewController {
     
     @IBOutlet weak var charaNameTableView: UITableView!
+    
+    let megamiList = CharaName.megamiList
+    var cardList = [CardStruct]()
 
+    @IBAction func onTappedLoadButton(_ sender: UIBarButtonItem) {
+        //カードリストをJSONから読込
+        guard let path = Bundle.main.path(forResource: "cards", ofType: "json") else {
+            return
+        }
+        
+        do {
+            let jsonStr = try String(contentsOfFile: path)
+            cardList = try! JSONDecoder().decode([CardStruct].self,
+                                                 from: jsonStr.data(using: .utf8)!)
+        } catch {
+            print("jsonの読み込みに失敗しました")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,14 +42,13 @@ class MainListViewController: UIViewController {
 
 extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //超絶暫定コード。配列から取得する
-        return 1
+        return megamiList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //超絶暫定コード
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CharaNameCell") as? CharaNameCell {
-            cell.setup(name: "ユリナ")
+            let megami = megamiList[indexPath.row]
+            cell.setup(name: megami.rawValue)
             return cell
         }
 
@@ -43,7 +60,11 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
             //例外。飛べない
             return
         }
+        
+        let selectedCard = cardList.filter({ $0.megami == megamiList[indexPath.row].rawValue })
 
+        viewCon.cardList = selectedCard
+//        viewCon.characterName = megamiList[indexPath.row]
         self.navigationController?.pushViewController(viewCon,
                                                       animated: true)
 
