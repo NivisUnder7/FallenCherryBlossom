@@ -48,7 +48,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zYb-a7-rFZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SHj-tv-ZLJ"/>
+                    <navigationItem key="navigationItem" id="SHj-tv-ZLJ">
+                        <barButtonItem key="leftBarButtonItem" title="読込" id="YLj-OK-eY3">
+                            <connections>
+                                <action selector="onTappedLoadButton:" destination="IYG-LI-dnh" id="IVA-Fx-0v5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="charaNameTableView" destination="3mB-O5-I3r" id="bJ8-Ea-uJe"/>
                     </connections>

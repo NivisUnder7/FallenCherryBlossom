@@ -8,9 +8,20 @@
 
 import Foundation
 
-struct CardStruct {
-    var cardName: String
-    var actionType: ActionType
-    var damage: String
-    var distance: String
+struct CardStruct: Codable {
+    let id: Int
+    let megami: String
+    let name: String
+    let main_type: String
+    let sub_type: String
+    let range: String
+    let damage_aura: String
+    let damage_life: String
+    
+//    enum CoadingKeys: String, CodingKey {
+//        case mainType = "main_type"
+//        case subType = "sub_type"
+//        case damageAura = "damage_aura"
+//        case damageLife = "damage_life"
+//    }
 }

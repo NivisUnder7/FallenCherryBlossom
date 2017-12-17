@@ -18,6 +18,7 @@
 		16F4A3CA1FE3935E00697A9F /* CardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4A3C91FE3935E00697A9F /* CardImageViewController.swift */; };
 		18DE4252342DE885AB144061 /* Pods_FallenCherryBlossomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530E9F20662A4C51C408137D /* Pods_FallenCherryBlossomTests.framework */; };
 		614C2CC3F565FED7E7575B55 /* Pods_FallenCherryBlossom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B352DE26E231A20B34FAE0 /* Pods_FallenCherryBlossom.framework */; };
+		6A11B2051FE64318009A4024 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A11B2041FE64318009A4024 /* cards.json */; };
 		6A894F271FE2E55800707521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A894F261FE2E55800707521 /* AppDelegate.swift */; };
 		6A894F2C1FE2E55800707521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A894F2A1FE2E55800707521 /* Main.storyboard */; };
 		6A894F2E1FE2E55800707521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A894F2D1FE2E55800707521 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		493D226735BFB75F7325E397 /* Pods-FallenCherryBlossomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossomUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossomUITests/Pods-FallenCherryBlossomUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		530E9F20662A4C51C408137D /* Pods_FallenCherryBlossomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallenCherryBlossomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB1DF479499F651C48B90E6 /* Pods-FallenCherryBlossom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallenCherryBlossom.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallenCherryBlossom/Pods-FallenCherryBlossom.release.xcconfig"; sourceTree = "<group>"; };
+		6A11B2041FE64318009A4024 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		6A894F231FE2E55800707521 /* FallenCherryBlossom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallenCherryBlossom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A894F261FE2E55800707521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A894F2B1FE2E55800707521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				16F4A3C21FE36C8A00697A9F /* CardStruct.swift */,
 				16F4A3C41FE36CA300697A9F /* Enum.swift */,
 				6A894F2A1FE2E55800707521 /* Main.storyboard */,
+				6A11B2041FE64318009A4024 /* cards.json */,
 				6A894F2D1FE2E55800707521 /* Assets.xcassets */,
 				6A894F2F1FE2E55800707521 /* LaunchScreen.storyboard */,
 				6A894F321FE2E55800707521 /* Info.plist */,
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A894F311FE2E55800707521 /* LaunchScreen.storyboard in Resources */,
+				6A11B2051FE64318009A4024 /* cards.json in Resources */,
 				6A894F2E1FE2E55800707521 /* Assets.xcassets in Resources */,
 				16F4A3C11FE36ABF00697A9F /* CardCell.xib in Resources */,
 				16F4A3B81FE3595200697A9F /* CharaNameCell.xib in Resources */,
@@ -356,9 +360,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FallenCherryBlossom/Pods-FallenCherryBlossom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -400,13 +407,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FallenCherryBlossomUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		38CE411D52AC51C07D8CCDB3 /* [CP] Embed Pods Frameworks */ = {
@@ -430,13 +440,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FallenCherryBlossomTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B6E817D935A37F2F2F489B3 /* [CP] Copy Pods Resources */ = {
@@ -460,13 +473,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FallenCherryBlossom-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0D70BD644C87616173590E3 /* [CP] Copy Pods Resources */ = {

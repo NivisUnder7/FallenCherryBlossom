@@ -15,48 +15,43 @@ class CardListViewController: UIViewController {
 
     let dequeueCellName = "CardCell"
     var characterName: CharaName? = nil
-    var cardList = [String]()
+    var cardList = [CardStruct]()
 
     override func viewDidLoad() {
         cardListTableView.delegate = self
         cardListTableView.dataSource = self
 
         cardListTableView.register(R.nib.cardCell(), forCellReuseIdentifier: dequeueCellName)
-        setupCardList()
+//        setupCardList()
         cardListTableView.reloadData()
     }
 
-    func setupCardList() {
-        guard let charaName = characterName else {
-            return
-        }
-
-        switch charaName {
-        case .yurina:
-            cardList = YurinaCardName.yurinaAllCardList
-        case .tokoyo:
-            break
-        case .hisame:
-            break
-        }
-    }
+//    func setupCardList() {
+//        guard let charaName = characterName else {
+//            return
+//        }
+//
+//        switch charaName {
+//        case .yurina:
+//            cardList = cardList
+//        case .tokoyo:
+//            break
+//        default:
+//            break
+//        }
+//    }
 }
 
 extension CardListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //超絶暫定コード。配列から取る
         return cardList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //超絶暫定コード。配列から取る
         if let cell = tableView.dequeueReusableCell(withIdentifier: dequeueCellName) as? CardCell {
-            let cellInfo = CardStruct(cardName: cardList[indexPath.row],
-                                      actionType: .attack,
-                                      damage: "",
-                                      distance: "")
-            cell.setup(cardInfo: cellInfo)
+            cell.setup(cardInfo: cardList[indexPath.row])
 
             return cell
         }
@@ -70,6 +65,7 @@ extension CardListViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
 
+        viewCon.cardName = cardList[indexPath.row].name
         self.navigationController?.pushViewController(viewCon,
                                                       animated: true)
     }
