@@ -10,7 +10,7 @@ import Foundation
 
 struct CardStruct: Codable {
     let id: Int
-    let megami: String
+    let megami_name: String
     let name: String
     let main_type: String
     let sub_type: String

@@ -61,10 +61,9 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         
-        let selectedCard = cardList.filter({ $0.megami == megamiList[indexPath.row].rawValue })
+        let selectedCard = cardList.filter({ $0.megami_name == megamiList[indexPath.row].rawValue })
 
         viewCon.cardList = selectedCard
-//        viewCon.characterName = megamiList[indexPath.row]
         self.navigationController?.pushViewController(viewCon,
                                                       animated: true)
 

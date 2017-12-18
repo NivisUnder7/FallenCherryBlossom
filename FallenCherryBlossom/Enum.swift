@@ -9,19 +9,19 @@
 import Foundation
 
 enum CharaName: String {
-    case yurina = "ユリナ(第二幕)"
-    case himika = "ヒミカ(第二幕)"
-    case tokoyo = "トコヨ(第二幕)"
-    case oboro = "オボロ(第二幕)"
-    case yukihi = "ユキヒ(第二幕)"
-    case shinra = "シンラ(第二幕)"
-    case saine = "サイネ(第二幕)"
-    case hagane = "ハガネ(第二幕)"
-    case tikage = "チカゲ(第二幕)"
-    case kururu = "クルル(第二幕)"
-    case sariya = "サリヤ(第二幕)"
-    case utsuro = "ウツロ(第二幕)"
-    case honoka = "ホノカ(第二幕)"
+    case yurina = "ユリナ"
+    case himika = "ヒミカ"
+    case tokoyo = "トコヨ"
+    case oboro = "オボロ"
+    case yukihi = "ユキヒ"
+    case shinra = "シンラ"
+    case saine = "サイネ"
+    case hagane = "ハガネ"
+    case tikage = "チカゲ"
+    case kururu = "クルル"
+    case sariya = "サリヤ"
+    case utsuro = "ウツロ"
+    case honoka = "ホノカ"
     
     static let megamiList: [CharaName] = [.yurina, .himika, .tokoyo, .oboro,
                                           .yukihi, .shinra, .saine, .hagane,
