@@ -29,6 +29,9 @@ class MainListViewController: UIViewController {
         } catch {
             print("jsonの読み込みに失敗しました")
         }
+
+        //ユキヒのカードの重複を取り除く
+        cardList = organizeYukihiCard()
     }
     
     @IBAction func onTappedSearchButton(_ sender: UIBarButtonItem) {
@@ -46,6 +49,18 @@ class MainListViewController: UIViewController {
         charaNameTableView.delegate = self
         charaNameTableView.dataSource = self
         charaNameTableView.register(R.nib.charaNameCell(), forCellReuseIdentifier: "CharaNameCell")
+    }
+
+    func organizeYukihiCard() -> [CardStruct] {
+        var uniqueCardList = [CardStruct]()
+        for card in cardList {
+            if !uniqueCardList.contains(where: { $0.name == card.name }) {
+                //カード名が重複していない場合はリストにadd
+                uniqueCardList.append(card)
+            }
+        }
+
+        return uniqueCardList
     }
 }
 
