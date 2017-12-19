@@ -17,11 +17,4 @@ struct CardStruct: Codable {
     let range: String
     let damage_aura: String
     let damage_life: String
-    
-//    enum CoadingKeys: String, CodingKey {
-//        case mainType = "main_type"
-//        case subType = "sub_type"
-//        case damageAura = "damage_aura"
-//        case damageLife = "damage_life"
-//    }
 }
