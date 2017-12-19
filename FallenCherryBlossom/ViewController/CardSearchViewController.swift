@@ -15,14 +15,16 @@ class CardSearchViewController: UIViewController {
     let megamiList = CharaName.megamiList
     let actionTypeList = ActionType.actionTypeList
     var allCardList = [CardStruct]()
-    let defaultMegamiButtonTitle = "メガミ"
+    let defaultMegamiButtonTitle1 = "メガミ1"
+    let defaultMegamiButtonTitle2 = "メガミ2"
     let defaultActionTypeButtonTitle = "アクション"
     @IBOutlet weak var megamiButton: UIButton!
+    @IBOutlet weak var megamiButton2: UIButton!
     @IBOutlet weak var actionTypeButton: UIButton!
 
     @IBAction func onTappedMegamiButton(_ sender: UIButton) {
         let strMegamiList = megamiList.map({ $0.rawValue })
-        let picker = ActionSheetStringPicker(title: defaultMegamiButtonTitle, rows: strMegamiList,
+        let picker = ActionSheetStringPicker(title: defaultMegamiButtonTitle1, rows: strMegamiList,
                                              initialSelection: 0,
                                              doneBlock: { (picker, value, index) in
                                                 self.megamiButton.setAttributedTitle((index as? String)?.getSearchButtonFont(),
@@ -46,13 +48,21 @@ class CardSearchViewController: UIViewController {
     }
 
     @IBAction func onTappedSearchButton(_ sender: UIButton) {
-        var selectedCardList = allCardList
-        if megamiButton.titleLabel?.text != defaultMegamiButtonTitle {
-            selectedCardList = selectedCardList.filter({ $0.megami_name == megamiButton.titleLabel?.text })
+//        var selectedCardList = allCardList
+        var selectedMegami1 = [CardStruct]()
+        if megamiButton.titleLabel?.text != defaultMegamiButtonTitle1 {
+            selectedMegami1 = allCardList.filter({ $0.megami_name == megamiButton.titleLabel?.text })
         }
 
+        var selectedMegami2 = [CardStruct]()
+        if megamiButton.titleLabel?.text != defaultMegamiButtonTitle2 {
+            selectedMegami2 = allCardList.filter({ $0.megami_name == megamiButton2.titleLabel?.text })
+        }
+        
+        var mergedMegamiCardList = selectedMegami1 + selectedMegami2
+        
         if actionTypeButton.titleLabel?.text != defaultActionTypeButtonTitle {
-            selectedCardList = selectedCardList.filter({ $0.main_type == actionTypeButton.titleLabel?.text ||
+            mergedMegamiCardList = mergedMegamiCardList.filter({ $0.main_type == actionTypeButton.titleLabel?.text ||
                 $0.sub_type == actionTypeButton.titleLabel?.text
             })
         }
@@ -61,10 +71,23 @@ class CardSearchViewController: UIViewController {
             return
         }
 
-        viewCon.cardList = selectedCardList
+        viewCon.cardList = mergedMegamiCardList
         self.navigationController?.pushViewController(viewCon, animated: true)
     }
 
+    @IBAction func onTappedMegami2Button(_ sender: UIButton) {
+        let strMegamiList = megamiList.map({ $0.rawValue })
+        let picker = ActionSheetStringPicker(title: defaultMegamiButtonTitle2, rows: strMegamiList,
+                                             initialSelection: 0,
+                                             doneBlock: { (picker, value, index) in
+                                                self.megamiButton2.setAttributedTitle((index as? String)?.getSearchButtonFont(),
+                                                                                     for: .normal)
+        },
+                                             cancel: nil , origin: sender)
+        
+        picker?.show()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
