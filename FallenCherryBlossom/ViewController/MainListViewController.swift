@@ -30,8 +30,8 @@ class MainListViewController: UIViewController {
             print("jsonの読み込みに失敗しました")
         }
 
-        //ユキヒのカードの重複を取り除く
-        cardList = organizeYukihiCard()
+        //ユキヒのカードの重複を取り除く(現状は同名カードを取り除くという処理)
+        cardList = removeDupulicatedCard()
     }
     
     @IBAction func onTappedSearchButton(_ sender: UIBarButtonItem) {
@@ -51,7 +51,7 @@ class MainListViewController: UIViewController {
         charaNameTableView.register(R.nib.charaNameCell(), forCellReuseIdentifier: "CharaNameCell")
     }
 
-    func organizeYukihiCard() -> [CardStruct] {
+    func removeDupulicatedCard() -> [CardStruct] {
         var uniqueCardList = [CardStruct]()
         for card in cardList {
             if !uniqueCardList.contains(where: { $0.name == card.name }) {
