@@ -31,6 +31,15 @@ class MainListViewController: UIViewController {
         }
     }
     
+    @IBAction func onTappedSearchButton(_ sender: UIBarButtonItem) {
+        guard let viewCon = R.storyboard.main.searchViewControllerId() else {
+            return
+        }
+
+        viewCon.allCardList = cardList
+        self.navigationController?.pushViewController(viewCon, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

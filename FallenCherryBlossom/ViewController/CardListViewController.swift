@@ -14,7 +14,6 @@ class CardListViewController: UIViewController {
     @IBOutlet weak var cardListTableView: UITableView!
 
     let dequeueCellName = "CardCell"
-    var characterName: CharaName? = nil
     var cardList = [CardStruct]()
 
     override func viewDidLoad() {
@@ -22,24 +21,8 @@ class CardListViewController: UIViewController {
         cardListTableView.dataSource = self
 
         cardListTableView.register(R.nib.cardCell(), forCellReuseIdentifier: dequeueCellName)
-//        setupCardList()
         cardListTableView.reloadData()
     }
-
-//    func setupCardList() {
-//        guard let charaName = characterName else {
-//            return
-//        }
-//
-//        switch charaName {
-//        case .yurina:
-//            cardList = cardList
-//        case .tokoyo:
-//            break
-//        default:
-//            break
-//        }
-//    }
 }
 
 extension CardListViewController: UITableViewDelegate, UITableViewDataSource {

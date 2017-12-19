@@ -7,6 +7,7 @@ target 'FallenCherryBlossom' do
 
   # Pods for FallenCherryBlossom
   pod 'R.swift'
+  pod 'ActionSheetPicker-3.0', '~> 2.3.0'
 
   target 'FallenCherryBlossomTests' do
     inherit! :search_paths

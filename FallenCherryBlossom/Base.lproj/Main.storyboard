@@ -54,6 +54,11 @@
                                 <action selector="onTappedLoadButton:" destination="IYG-LI-dnh" id="IVA-Fx-0v5"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="検索" id="75a-G9-Y8W">
+                            <connections>
+                                <action selector="onTappedSearchButton:" destination="IYG-LI-dnh" id="fTp-Vl-ciQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="charaNameTableView" destination="3mB-O5-I3r" id="bJ8-Ea-uJe"/>
@@ -62,6 +67,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fas-VJ-usD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-235" y="-35"/>
+        </scene>
+        <!--Card Search View Controller-->
+        <scene sceneID="7ve-0b-Ypw">
+            <objects>
+                <viewController storyboardIdentifier="searchViewControllerId" id="NE2-CM-xha" customClass="CardSearchViewController" customModule="FallenCherryBlossom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="arE-wo-UK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-uV-K3f">
+                                <rect key="frame" x="160.5" y="64" width="54" height="33"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="メガミ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="HiraginoSans-W8"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedMegamiButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="PST-yL-HO8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xms-C6-ZIo">
+                                <rect key="frame" x="142" y="129" width="90" height="33"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="アクション">
+                                            <attributes>
+                                                <color key="NSColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="HiraginoSans-W8"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedActionTypeButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="A5f-2q-xTB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-D2-b0A">
+                                <rect key="frame" x="172" y="577" width="30" height="26"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="検索">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name=".HiraKakuInterface-W3"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedSearchButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="Ubv-aO-0oN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a5t-D2-b0A" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="6XE-Ji-Quf"/>
+                            <constraint firstItem="ds1-uV-K3f" firstAttribute="top" secondItem="beb-qq-SDT" secondAttribute="top" constant="44" id="MNv-E1-9SM"/>
+                            <constraint firstItem="xms-C6-ZIo" firstAttribute="top" secondItem="ds1-uV-K3f" secondAttribute="bottom" constant="32" id="Ma2-eg-vxs"/>
+                            <constraint firstItem="beb-qq-SDT" firstAttribute="bottom" secondItem="a5t-D2-b0A" secondAttribute="bottom" constant="64" id="ZGr-ZR-nOx"/>
+                            <constraint firstItem="xms-C6-ZIo" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="pUj-l0-Emu"/>
+                            <constraint firstItem="ds1-uV-K3f" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="ssk-f2-CL7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="beb-qq-SDT"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionTypeButton" destination="xms-C6-ZIo" id="aiY-uv-Lhp"/>
+                        <outlet property="megamiButton" destination="ds1-uV-K3f" id="BUJ-hP-9aU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJF-PG-KFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231.19999999999999" y="656.22188905547227"/>
         </scene>
         <!--Card Image View Controller-->
         <scene sceneID="7pZ-Zm-vmP">

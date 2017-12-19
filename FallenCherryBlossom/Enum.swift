@@ -35,4 +35,7 @@ enum ActionType: String {
     case counter = "対応"
     case enchant = "付与"
     case fullPower = "全力"
+
+    static let actionTypeList: [ActionType] = [.attack, .action, .counter,
+                                               .enchant, .fullPower]
 }
