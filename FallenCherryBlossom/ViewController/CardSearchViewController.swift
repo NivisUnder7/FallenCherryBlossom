@@ -25,7 +25,8 @@ class CardSearchViewController: UIViewController {
         let picker = ActionSheetStringPicker(title: defaultMegamiButtonTitle, rows: strMegamiList,
                                              initialSelection: 0,
                                              doneBlock: { (picker, value, index) in
-                                                self.megamiButton.titleLabel?.text = index as? String
+                                                self.megamiButton.setAttributedTitle((index as? String)?.getSearchButtonFont(),
+                                                                                     for: .normal)
         },
                                              cancel: nil , origin: sender)
 
@@ -38,8 +39,8 @@ class CardSearchViewController: UIViewController {
                                              rows: actionTypeStrList,
                                              initialSelection: 0,
                                              doneBlock: { (picker, value, index) in
-                                                self.actionTypeButton.titleLabel?.text = index as? String
-                                                self.view.layoutIfNeeded()
+                                                self.actionTypeButton.setAttributedTitle((index as? String)?.getSearchButtonFont(),
+                                                                                         for: .normal)
         }, cancel: nil, origin: sender)
         picker?.show()
     }

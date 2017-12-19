@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16B564FC1FE8A78500195C6B /* CardSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B564FB1FE8A78500195C6B /* CardSearchViewController.swift */; };
+		16B564FE1FE9031000195C6B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B564FD1FE9031000195C6B /* StringExtension.swift */; };
 		16F4A3B81FE3595200697A9F /* CharaNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F4A3B71FE3595200697A9F /* CharaNameCell.xib */; };
 		16F4A3BA1FE35B3A00697A9F /* CharaNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4A3B91FE35B3A00697A9F /* CharaNameCell.swift */; };
 		16F4A3BD1FE35F1100697A9F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4A3BC1FE35F1000697A9F /* R.generated.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		16B564FB1FE8A78500195C6B /* CardSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSearchViewController.swift; sourceTree = "<group>"; };
+		16B564FD1FE9031000195C6B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		16F4A3B71FE3595200697A9F /* CharaNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharaNameCell.xib; sourceTree = "<group>"; };
 		16F4A3B91FE35B3A00697A9F /* CharaNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharaNameCell.swift; sourceTree = "<group>"; };
 		16F4A3BC1FE35F1000697A9F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -160,6 +162,7 @@
 			children = (
 				16F4A3BC1FE35F1000697A9F /* R.generated.swift */,
 				6A894F261FE2E55800707521 /* AppDelegate.swift */,
+				16B564FD1FE9031000195C6B /* StringExtension.swift */,
 				16F4A3B61FE358B000697A9F /* CustomCell */,
 				16F4A3C61FE36F9200697A9F /* ViewController */,
 				16F4A3C21FE36C8A00697A9F /* CardStruct.swift */,
@@ -534,6 +537,7 @@
 				16F4A3C81FE36FAC00697A9F /* CardListViewController.swift in Sources */,
 				6A894F271FE2E55800707521 /* AppDelegate.swift in Sources */,
 				16F4A3CA1FE3935E00697A9F /* CardImageViewController.swift in Sources */,
+				16B564FE1FE9031000195C6B /* StringExtension.swift in Sources */,
 				16F4A3BF1FE36AAC00697A9F /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
