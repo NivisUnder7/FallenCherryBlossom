@@ -14,7 +14,7 @@ class CardSearchViewController: UIViewController {
 
     let megamiList = CharaName.megamiList
     let actionTypeList = ActionType.actionTypeList
-    var allCardList = [CardStruct]()
+    var allCardList = [Card]()
     let defaultMegamiButtonTitle1 = "メガミ1"
     let defaultMegamiButtonTitle2 = "メガミ2"
     let defaultActionTypeButtonTitle = "アクション"
@@ -49,21 +49,21 @@ class CardSearchViewController: UIViewController {
 
     @IBAction func onTappedSearchButton(_ sender: UIButton) {
 //        var selectedCardList = allCardList
-        var selectedMegami1 = [CardStruct]()
+        var selectedMegami1 = [Card]()
         if megamiButton.titleLabel?.text != defaultMegamiButtonTitle1 {
-            selectedMegami1 = allCardList.filter({ $0.megami_name == megamiButton.titleLabel?.text })
+            selectedMegami1 = allCardList.filter({ $0.megamiName == megamiButton.titleLabel?.text })
         }
 
-        var selectedMegami2 = [CardStruct]()
+        var selectedMegami2 = [Card]()
         if megamiButton.titleLabel?.text != defaultMegamiButtonTitle2 {
-            selectedMegami2 = allCardList.filter({ $0.megami_name == megamiButton2.titleLabel?.text })
+            selectedMegami2 = allCardList.filter({ $0.megamiName == megamiButton2.titleLabel?.text })
         }
         
         var mergedMegamiCardList = selectedMegami1 + selectedMegami2
         
         if actionTypeButton.titleLabel?.text != defaultActionTypeButtonTitle {
-            mergedMegamiCardList = mergedMegamiCardList.filter({ $0.main_type == actionTypeButton.titleLabel?.text ||
-                $0.sub_type == actionTypeButton.titleLabel?.text
+            mergedMegamiCardList = mergedMegamiCardList.filter({ $0.mainType == actionTypeButton.titleLabel?.text ||
+                $0.subType == actionTypeButton.titleLabel?.text
             })
         }
 

@@ -18,13 +18,13 @@ class CardCell: UITableViewCell {
     let attack = "攻撃"
     let subTypeNothing = "-"
 
-    func setup(cardInfo: CardStruct) {
-        cardNameLabel.text = cardInfo.name
+    func setup(cardInfo: Card) {
+        cardNameLabel.text = cardInfo.cardName
         //subtypeはなしの場合「-」がJSONに入っているので空欄に読み替える
-        let subType = getSubtype(subTypeString: cardInfo.sub_type)
-        actionTypeLabel.text = cardInfo.main_type + subType
-        if cardInfo.main_type == attack || cardInfo.sub_type == attack {
-            damageLable.text = cardInfo.damage_aura + "/" + cardInfo.damage_life
+        let subType = getSubtype(subTypeString: cardInfo.subType)
+        actionTypeLabel.text = cardInfo.mainType + subType
+        if cardInfo.mainType == attack || cardInfo.subType == attack {
+            damageLable.text = cardInfo.damageAura + "/" + cardInfo.damageLife
         } else {
             damageLable.text = ""
         }

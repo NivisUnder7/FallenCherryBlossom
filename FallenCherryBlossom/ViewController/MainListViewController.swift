@@ -14,24 +14,32 @@ class MainListViewController: UIViewController {
     @IBOutlet weak var charaNameTableView: UITableView!
     
     let megamiList = CharaName.megamiList
-    var cardList = [CardStruct]()
+    var cardList = [Card]()
 
     @IBAction func onTappedLoadButton(_ sender: UIBarButtonItem) {
-        //カードリストをJSONから読込
+        // カードリストをJSONから読込
         guard let path = Bundle.main.path(forResource: "cards", ofType: "json") else {
             return
         }
+
+        var cardModelList = [CardModel]()
         
         do {
             let jsonStr = try String(contentsOfFile: path)
-            cardList = try! JSONDecoder().decode([CardStruct].self,
+            cardModelList = try! JSONDecoder().decode([CardModel].self,
                                                  from: jsonStr.data(using: .utf8)!)
         } catch {
             print("jsonの読み込みに失敗しました")
         }
 
-        //ユキヒのカードの重複を取り除く(現状は同名カードを取り除くという処理)
-        cardList = removeDupulicatedCard()
+        // ユキヒのカードの重複を取り除く(現状は同名カードを取り除くという処理)
+        cardModelList = removeDupulicatedCard(cardModelList: cardModelList)
+
+        // カードクラスに
+        cardList.removeAll()
+        for card in cardModelList {
+            cardList.append(Card(model: card))
+        }
     }
     
     @IBAction func onTappedSearchButton(_ sender: UIBarButtonItem) {
@@ -51,11 +59,11 @@ class MainListViewController: UIViewController {
         charaNameTableView.register(R.nib.charaNameCell(), forCellReuseIdentifier: "CharaNameCell")
     }
 
-    func removeDupulicatedCard() -> [CardStruct] {
-        var uniqueCardList = [CardStruct]()
-        for card in cardList {
+    func removeDupulicatedCard(cardModelList: [CardModel]) -> [CardModel] {
+        var uniqueCardList = [CardModel]()
+        for card in cardModelList {
             if !uniqueCardList.contains(where: { $0.name == card.name }) {
-                //カード名が重複していない場合はリストにadd
+                // カード名が重複していない場合はリストにadd
                 uniqueCardList.append(card)
             }
         }
@@ -81,11 +89,11 @@ extension MainListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewCon = R.storyboard.main.cardListStoryBoardId() else {
-            //例外。飛べない
+            // 例外。飛べない
             return
         }
         
-        let selectedCard = cardList.filter({ $0.megami_name == megamiList[indexPath.row].rawValue })
+        let selectedCard = cardList.filter({ $0.megamiName == megamiList[indexPath.row].rawValue })
 
         viewCon.cardList = selectedCard
         self.navigationController?.pushViewController(viewCon,
