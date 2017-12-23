@@ -14,7 +14,7 @@ class CardListViewController: UIViewController {
     @IBOutlet weak var cardListTableView: UITableView!
 
     let dequeueCellName = "CardCell"
-    var cardList = [CardStruct]()
+    var cardList = [Card]()
 
     override func viewDidLoad() {
         cardListTableView.delegate = self
@@ -32,7 +32,6 @@ extension CardListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //超絶暫定コード。配列から取る
         if let cell = tableView.dequeueReusableCell(withIdentifier: dequeueCellName) as? CardCell {
             cell.setup(cardInfo: cardList[indexPath.row])
 
@@ -44,11 +43,11 @@ extension CardListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewCon = R.storyboard.main.cardImageStoryboardId() else {
-            //例外。飛べない
+            // 例外。飛べない
             return
         }
 
-        viewCon.cardName = cardList[indexPath.row].name
+        viewCon.cardId = cardList[indexPath.row].cardId
         self.navigationController?.pushViewController(viewCon,
                                                       animated: true)
     }

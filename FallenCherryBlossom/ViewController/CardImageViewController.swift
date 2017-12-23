@@ -12,13 +12,13 @@ import UIKit
 class CardImageViewController: UIViewController {
 
     @IBOutlet weak var cardImageView: UIImageView!
-    var cardName: String? = nil
+    var cardId: String? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        if let cardName = cardName {
-            let image = UIImage(named: cardName)
+        if let cardId = cardId {
+            let image = UIImage(named: cardId)
             cardImageView.image = image
         }
     }
