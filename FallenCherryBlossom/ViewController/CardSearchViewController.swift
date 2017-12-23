@@ -50,6 +50,7 @@ class CardSearchViewController: UIViewController {
     @IBAction func onTappedSearchButton(_ sender: UIButton) {
 //        var selectedCardList = allCardList
         var selectedMegami1 = [Card]()
+
         if megamiButton.titleLabel?.text != defaultMegamiButtonTitle1 {
             selectedMegami1 = allCardList.filter({ $0.megamiName == megamiButton.titleLabel?.text })
         }

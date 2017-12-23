@@ -57,6 +57,7 @@ class MainListViewController: UIViewController {
         charaNameTableView.delegate = self
         charaNameTableView.dataSource = self
         charaNameTableView.register(R.nib.charaNameCell(), forCellReuseIdentifier: "CharaNameCell")
+        charaNameTableView.rowHeight = 66
     }
 
     func removeDupulicatedCard(cardModelList: [CardModel]) -> [CardModel] {
