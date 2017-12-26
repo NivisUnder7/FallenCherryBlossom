@@ -47,9 +47,9 @@ class CharaNameCell: UITableViewCell {
         case .sariya:
             image = R.image.sd_thallya()
         case .utsuro:
-            image = UIImage()
+            image = R.image.sd_utsuro()
         case .honoka:
-            image = UIImage()
+            image = R.image.sd_honoka()
         case .hagane:
             image = R.image.sd_hagane()
         }
