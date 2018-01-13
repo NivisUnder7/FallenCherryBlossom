@@ -93,70 +93,55 @@
                                     <action selector="onTappedSearchButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="Ubv-aO-0oN"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-O0-s6z">
-                                <rect key="frame" x="0.0" y="60" width="375" height="128"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36f-pl-gYj">
-                                        <rect key="frame" x="0.0" y="42" width="1" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="EQm-zs-kcI"/>
-                                            <constraint firstAttribute="height" constant="44" id="lv1-bE-Gob"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-uV-K3f">
-                                        <rect key="frame" x="80.5" y="49" width="67" height="30"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="メガミ1">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="18" name="HiraginoSans-W6"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="onTappedMegamiButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="PST-yL-HO8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vza-Np-zlb">
-                                        <rect key="frame" x="227.5" y="49" width="67" height="30"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="メガミ2">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="18" name="HiraginoSans-W6"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="onTappedMegami2Button:" destination="NE2-CM-xha" eventType="touchUpInside" id="2zY-R9-zcu"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6m-Q1-FiD">
-                                        <rect key="frame" x="374" y="0.0" width="1" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="nPn-ue-CCS"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Ig2-bN-3sD"/>
-                                    <constraint firstAttribute="trailing" secondItem="c6m-Q1-FiD" secondAttribute="trailing" id="fiq-5x-o7K"/>
-                                    <constraint firstItem="36f-pl-gYj" firstAttribute="leading" secondItem="MFa-O0-s6z" secondAttribute="leading" id="xWq-p7-7bh"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xms-C6-ZIo">
-                                <rect key="frame" x="142" y="220" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-uV-K3f">
+                                <rect key="frame" x="160" y="31" width="55" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="アクション">
+                                        <fragment content="非選択">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="HiraginoSans-W6"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedMegamiButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="PST-yL-HO8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xk-10-SbJ">
+                                <rect key="frame" x="16" y="77" width="359" height="1"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93443465232849121" blue="0.93443465232849121" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6z7-aS-G4X"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vza-Np-zlb">
+                                <rect key="frame" x="160" y="89.5" width="55" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="非選択">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="HiraginoSans-W6"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedMegami2Button:" destination="NE2-CM-xha" eventType="touchUpInside" id="2zY-R9-zcu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xms-C6-ZIo">
+                                <rect key="frame" x="160" y="143.5" width="55" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="非選択">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="18" name="HiraginoSans-W6"/>
@@ -175,16 +160,64 @@
                                     <action selector="onTappedActionTypeButton:" destination="NE2-CM-xha" eventType="touchUpInside" id="A5f-2q-xTB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メガミ1 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-aC-Hhg">
+                                <rect key="frame" x="16" y="36" width="64" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1H-2P-LkY">
+                                <rect key="frame" x="16" y="131" width="359" height="1"/>
+                                <color key="backgroundColor" white="0.95119977678571432" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="atj-cI-sNc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メガミ2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srr-Bv-iW5">
+                                <rect key="frame" x="16" y="94" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アクション" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J8-Tg-uwt">
+                                <rect key="frame" x="16" y="148" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgH-zl-Qvu">
+                                <rect key="frame" x="16" y="185" width="359" height="1"/>
+                                <color key="backgroundColor" white="0.95359933035714284" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8yb-bZ-HPO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MFa-O0-s6z" firstAttribute="top" secondItem="arE-wo-UK3" secondAttribute="top" constant="60" id="46A-X5-8iq"/>
+                            <constraint firstItem="XgH-zl-Qvu" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" constant="16" id="3BY-cT-tgE"/>
+                            <constraint firstItem="4xk-10-SbJ" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" constant="16" id="4bo-5c-iny"/>
                             <constraint firstItem="a5t-D2-b0A" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="6XE-Ji-Quf"/>
+                            <constraint firstItem="qsX-aC-Hhg" firstAttribute="top" secondItem="beb-qq-SDT" secondAttribute="top" constant="16" id="Asf-Pi-ylL"/>
+                            <constraint firstItem="y1H-2P-LkY" firstAttribute="top" secondItem="Srr-Bv-iW5" secondAttribute="bottom" constant="16" id="EaQ-li-WRb"/>
+                            <constraint firstItem="4xk-10-SbJ" firstAttribute="top" secondItem="ds1-uV-K3f" secondAttribute="bottom" constant="16" id="MgX-93-M2E"/>
+                            <constraint firstItem="beb-qq-SDT" firstAttribute="trailing" secondItem="y1H-2P-LkY" secondAttribute="trailing" id="QfP-bw-QZy"/>
+                            <constraint firstItem="ds1-uV-K3f" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="Tma-h1-leb"/>
+                            <constraint firstItem="Srr-Bv-iW5" firstAttribute="top" secondItem="4xk-10-SbJ" secondAttribute="bottom" constant="16" id="Wtp-Ci-6Q8"/>
+                            <constraint firstItem="Srr-Bv-iW5" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" constant="16" id="Z8K-jp-dzB"/>
                             <constraint firstItem="beb-qq-SDT" firstAttribute="bottom" secondItem="a5t-D2-b0A" secondAttribute="bottom" constant="64" id="ZGr-ZR-nOx"/>
-                            <constraint firstItem="xms-C6-ZIo" firstAttribute="top" secondItem="MFa-O0-s6z" secondAttribute="bottom" constant="32" id="osy-Rp-12M"/>
+                            <constraint firstItem="9J8-Tg-uwt" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" constant="16" id="gnz-BG-Jkg"/>
+                            <constraint firstItem="vza-Np-zlb" firstAttribute="centerY" secondItem="Srr-Bv-iW5" secondAttribute="centerY" id="gzH-Sj-UMe"/>
+                            <constraint firstItem="beb-qq-SDT" firstAttribute="trailing" secondItem="XgH-zl-Qvu" secondAttribute="trailing" id="nsu-mG-zbq"/>
                             <constraint firstItem="xms-C6-ZIo" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="pUj-l0-Emu"/>
-                            <constraint firstItem="beb-qq-SDT" firstAttribute="trailing" secondItem="MFa-O0-s6z" secondAttribute="trailing" id="t5r-MI-G3T"/>
-                            <constraint firstItem="MFa-O0-s6z" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" id="tXF-wH-Ocx"/>
+                            <constraint firstItem="y1H-2P-LkY" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" constant="16" id="q0F-6T-wDM"/>
+                            <constraint firstItem="9J8-Tg-uwt" firstAttribute="top" secondItem="y1H-2P-LkY" secondAttribute="bottom" constant="16" id="qxM-gH-nfz"/>
+                            <constraint firstItem="qsX-aC-Hhg" firstAttribute="leading" secondItem="beb-qq-SDT" secondAttribute="leading" constant="16" id="s6w-Vu-elI"/>
+                            <constraint firstItem="ds1-uV-K3f" firstAttribute="centerY" secondItem="qsX-aC-Hhg" secondAttribute="centerY" id="u1Z-tJ-v4b"/>
+                            <constraint firstItem="vza-Np-zlb" firstAttribute="centerX" secondItem="arE-wo-UK3" secondAttribute="centerX" id="uBW-j7-Dve"/>
+                            <constraint firstItem="xms-C6-ZIo" firstAttribute="centerY" secondItem="9J8-Tg-uwt" secondAttribute="centerY" id="waP-bv-PAg"/>
+                            <constraint firstItem="beb-qq-SDT" firstAttribute="trailing" secondItem="4xk-10-SbJ" secondAttribute="trailing" id="wyC-vw-Leu"/>
+                            <constraint firstItem="XgH-zl-Qvu" firstAttribute="top" secondItem="9J8-Tg-uwt" secondAttribute="bottom" constant="16" id="yxh-Vm-aO4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="beb-qq-SDT"/>
                     </view>
